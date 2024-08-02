@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/styles.css" />
+    <title>MakeCV</title>
+  </head>
+  <body>
+    <nav class="navbar bg-white">
+      <div class="container">
+        <div class="brand-and-toggler">
+          <a href="index.html" class="navbar-brand">
+            <span class="navbar-brand-text">Make<span>CV</span></span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="header bg-bright" id="header">
+      <div class="container">
+        <div class="header-content text-center">
+          <h6 class="text-uppercase text-blue-dark fs-14 fw-6 ls-1">
+            Онлайн резюме конструктор
+          </h6>
+          <h1 class="lg-title">Создайте идеальное резюме с нами!</h1>
+          <p class="text-dark fs-18">
+            Мы поможем вам создать профессиональное резюме, которое выделит вас
+            среди конкурентов и увеличит ваши шансы на успех.
+          </p>
+          <a href="cv-maker.html">
+            <button class="btn btn-primary text-uppercase">
+              Сделать свое рюземе
+            </button>
+          </a>
+          <img width="100px" src="assets/images/example.svg" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section-one">
+      <div class="container">
+        <div class="section-one-content">
+          <div class="section-one-l">
+            <img src="assets/images/section2.svg" />
+          </div>
+          <div class="section-one-r text-center">
+            <h2 class="lg-title">
+              Воспользуйтесь лучшим конструктором резюме!
+            </h2>
+            <p class="text">
+              Наш простой и интуитивно понятный интерфейс позволяет быстро
+              создать резюме, которое подчеркнет ваши сильные стороны и опыт. Не
+              откладывайте на потом — создайте идеальное резюме сегодня и
+              сделайте первый шаг к вашей мечте!
+            </p>
+            <a href="cv-maker.html">
+              <button class="btn btn-primary text-uppercase">
+                Сделать свое рюземе
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer bg-dark">
+      <div class="container">
+        <div class="footer-content text-center">
+          <p class="fs-16">
+            &copy; Made by
+            <span
+              ><a class="text-white" href="https://t.me/bratandastana"
+                >@bratandastana</a
+              ></span
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      function createRipple(event) {
+        const button = event.currentTarget;
+
+        const circle = document.createElement("span");
+        const diameter = Math.max(button.clientWidth, button.clientHeight);
+        const radius = diameter / 2;
+
+        circle.style.width = circle.style.height = `${diameter}px`;
+        circle.style.left = `${event.clientX - button.offsetLeft - radius}px`;
+        circle.style.top = `${event.clientY - button.offsetTop - radius}px`;
+        circle.classList.add("ripple");
+
+        const ripple = button.getElementsByClassName("ripple")[0];
+
+        if (ripple) {
+          ripple.remove();
+        }
+
+        button.appendChild(circle);
+      }
+
+      const buttons = document.getElementsByTagName("button");
+      for (const button of buttons) {
+        button.addEventListener("click", createRipple);
+      }
+    </script>
+  </body>
+</html>
