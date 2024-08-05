@@ -151,6 +151,15 @@ a {
 }
 
 /* Font sizes */
+.fs-10 {
+  font-size: 10px;
+}
+.fs-11 {
+  font-size: 11px;
+}
+.fs-12 {
+  font-size: 12px;
+}
 .fs-13 {
   font-size: 13px;
 }
@@ -197,6 +206,11 @@ a {
 }
 .ls-2 {
   letter-spacing: 2px;
+}
+
+/* Line height  */
+.lh-18 {
+  line-height: 18px;
 }
 
 .container {
